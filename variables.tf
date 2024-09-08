@@ -73,3 +73,31 @@ variable "db_subnet_group_tags" {
     Name = "roboshop-database-subnet-group"
   }
 }
+
+variable "sg_ingress_rules" {
+  default = [
+    {
+      from_port = 0
+      to_port = 0
+      protocol = "-1"
+      description = "allowing all traffic from internet"
+      cidr_blocks = ["0.0.0.0/0"]
+    }
+  ]
+  
+}
+
+variable "sg_tags" {
+    default = "roboshop-sg"
+
+  
+  
+}
+
+variable "sg_name" {
+    default = "roboshop-securitygroup"
+
+  
+  
+}
+

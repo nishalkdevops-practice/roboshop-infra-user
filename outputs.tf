@@ -1,7 +1,6 @@
-# output "vpc_id" {
-#     value = module.vpc.vpc_id
-  
-# }
+output "vpc_id" {
+  value = module.vpc.vpc_id # module.<name>.<output-variable-name>
+ }
 
 output "public_subnet_ids" {
     value  = local.public_subnet_ids
